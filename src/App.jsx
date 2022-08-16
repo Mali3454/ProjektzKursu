@@ -1,14 +1,13 @@
 import React from 'react'
 
-import StoreProvide from './store/StroreProvider'
+import Header from './components/Header/Header'
+import StoreProvider from './store/StoreProvider'
 
 import './App.scss'
 
 const App = () => (
 	<StoreProvider>
-		<header>Hello </header>
+		<Header />
 	</StoreProvider>
 )
 export default App
-
-

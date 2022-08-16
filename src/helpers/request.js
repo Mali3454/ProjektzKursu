@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const reques = axios.create({
+const request = axios.create({
 	baseURL: 'http://localhost:8000',
+	validateStatus: false,
 })
 
-export default requestAnimationFrame
+export default request

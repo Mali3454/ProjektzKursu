@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 import request from '../helpers/request'
 
@@ -18,5 +18,17 @@ const StoreProvider = ({ children }) => {
 		fetchData()
 	}, [])
 
-	return <StoreContext.Provider value={(courses, setCourses, user, setUser)}>{children}</StoreContext.Provider>
+	return (
+		<StoreContext.Provider
+			value={{
+				courses,
+				setCourses,
+				user,
+				setUser,
+			}}>
+			{children}
+		</StoreContext.Provider>
+	)
 }
+
+export default StoreProvider
